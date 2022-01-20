@@ -18,7 +18,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1>App</h1>
+      <h1>Payin$guin</h1>
       <Routes>
         <Route path='*' element={isLoggedIn ? <Dashboard /> : <Login logFunction={loginUser} />} />
         <Route path='register' element={<Register />} />

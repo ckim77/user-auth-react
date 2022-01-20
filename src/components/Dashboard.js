@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Routes } from 'react-router';
-import Secret from './Secret';
+import Account from './Account';
 
 function Dashboard() {
   return <div>
       <Routes>
-          <Route path="/secret" element={<Secret />} />
+          <Route path="/account" element={<Account />} />
       </Routes>
   </div>;
 }

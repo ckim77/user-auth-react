@@ -18,7 +18,7 @@ function Login(props) {
             localStorage.setItem('id', res.data.id)
             localStorage.setItem('name', res.data.name)
             props.logFunction();
-            navigate('/secret');
+            navigate('/account');
         })
         .catch(err => {
             console.log(err.response.data);
@@ -45,7 +45,7 @@ function Login(props) {
     })
 
     return <div>
-        <h2>Login Page</h2>
+        <h2>Login</h2>
         <form onSubmit={formik.handleSubmit}>
             <input 
                 type="text" 
@@ -63,7 +63,7 @@ function Login(props) {
                 placeholder="Password"
             />
 
-            <button type="submit" disabled={!formik.isValid}>Submit</button>
+            <button className="login-button" type="submit" disabled={!formik.isValid}>Submit</button>
         </form>
     </div>;
 }
