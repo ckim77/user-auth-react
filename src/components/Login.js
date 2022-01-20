@@ -1,19 +1,41 @@
 import React from 'react';
 import {useFormik} from 'formik';
+import axios from 'axios';
 //formik does all the "handle" stuff so we dont have to write it
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login(props) {
+    let navigate = useNavigate();
     const initialValues = {
         username: "",
         password: ""
     }
 
     const onSubmit = (values) => {
-        console.log(values);
+        axios.post('http://localhost:4000/login', values)
+        .then(res => {
+            localStorage.setItem('username', res.data.username)
+            localStorage.setItem('id', res.data.id)
+            localStorage.setItem('name', res.data.name)
+            props.logFunction();
+            navigate('/secret');
+        })
+        .catch(err => {
+            console.log(err.response.data);
+        })
     }
 
     const validate = (values) => {
-        console.log('validation')
+        const errors = [];
+        if (!values.username) {
+            errors.username = "Username Required";
+        }
+        
+        if(!values.password) {
+            errors.password = "Password Required";
+        } else if (values.password.length < 8) {
+            errors.password = "Password must be longer than 7 characters";
+        }    
     }
 
     const formik = useFormik ({

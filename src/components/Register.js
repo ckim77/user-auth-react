@@ -11,10 +11,14 @@ function Register() {
     }
 
     const onSubmit = (values) => {
-        axios.post('https://localhost:4000/register', values)
+        axios.post('http://localhost:4000/register', values)
         .then(res => {
             console.log(res.data);
+            localStorage.setItem('username', res.data[0][0].username)
+            localStorage.setItem('id', res.data[0][0].id)
+            localStorage.setItem('name', res.data[0][0].name)
         })
+        .catch(err => console.log(err.response.data))
     }
 
     //validation part, pretty much checks for data entry on the front end
