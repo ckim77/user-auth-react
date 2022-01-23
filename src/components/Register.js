@@ -1,6 +1,7 @@
 import React from 'react';
 import {useFormik} from 'formik';
 import axios from 'axios';
+import './Register.css';
 
 
 function Register() {
@@ -54,7 +55,7 @@ function Register() {
         validate
     })
   
-  return <div>
+  return <div className="register">
     <h2>Create Your Account</h2>
     <form onSubmit={formik.handleSubmit}>
             <label>Enter your name:

@@ -1,0 +1,93 @@
+.register h1 {
+    color: white;
+}
+  
+.register h2 {
+    text-align: center;
+}
+  
+.register {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+  }
+  
+.register label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+.register h1, p {
+    margin: 1em auto;
+    text-align: center;
+  }
+  
+.register form {
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vw;
+    padding-bottom: 2em;
+  }
+  
+  
+.register fieldset {
+    border: none;
+    padding: 1rem 0;
+  }
+  
+.register fieldset:not(:last-of-type) {
+    border-bottom: 3px solid #3b3b4f;
+  }
+  
+.register label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+.register input, textarea, select {
+    width: 100%;
+    margin: 10px 0 0 0;
+    min-height: 2em;
+  }
+  
+.register .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+.register input, textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+    min-height: 2em;
+  }
+  
+.register input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+    border-radius: 50px;
+  }
+  
+.register input[type="file"] {
+    padding: 1px 2px;
+  }
+  
+.register .warning-container {
+    border: 2px solid red;
+    text-align: center;
+    padding: 10px;
+    margin: 50px;
+    margin-top: 30px;
+  }

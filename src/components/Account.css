@@ -1,0 +1,78 @@
+.account {
+    text-align: center;
+    font-family: Tahoma;
+    color: black;
+    background-color: white;
+}
+
+#sheet {
+    text-align: left;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #d0d0d5;
+}
+
+.account #header h2 {
+    font-size: 1.3em;
+    background-color: transparent;
+}
+
+
+.account .row {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid gray;
+    padding: 4px;
+    background-color: #d0d0d5;
+}
+
+.account .row:last-child {
+    background-color: transparent;
+    margin-bottom: 30px;
+}
+
+.account .name {
+    width: 100%;
+    text-align: left;
+}
+
+.account span:not(.name) {
+    margin-left: 10px;
+    min-width: 15%;
+    text-align: right;
+}
+
+.account span[class="current"] {
+    font-style: italic;
+}
+
+.account p[class~="total"] {
+    border-bottom: 4px double #0a0a23;
+    font-weight: bold;
+}
+
+.account .row[tabindex]:hover {
+    background-color: #99c9ff;
+}
+
+.account .row[tabindex]:focus {
+    background-color: #198eee;
+    color: white;
+}
+
+.account div > h2 {
+    background-color: #99c9ff;
+    font-size: 1.3em;
+    padding: 0 4px;
+}
+
+.account div ~ h2 {
+    font-weight: normal;
+}
+
+.account p + span {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #3b3b4f;
+}

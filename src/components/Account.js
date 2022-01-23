@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './Account.css';
 
 //this component can only be seen by people who are logged in (landing PAGE)
 function Account() {
-  return <div>
+  return <div className = "account">
     <div id="sheet">
         <div id="header">
             <h1>Budget Sheet</h1>

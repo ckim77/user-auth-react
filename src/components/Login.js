@@ -3,6 +3,8 @@ import {useFormik} from 'formik';
 import axios from 'axios';
 //formik does all the "handle" stuff so we dont have to write it
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
+
 
 function Login(props) {
     let navigate = useNavigate();
@@ -44,10 +46,13 @@ function Login(props) {
         validate
     })
 
-    return <div className="login-window">
+    return <div className="login">
+        
+        <div className="login-page">
         <h2>Login</h2>
         <form onSubmit={formik.handleSubmit}>
             <input 
+                className="username-window"
                 type="text" 
                 name="username"
                 onChange={formik.handleChange}
@@ -56,6 +61,7 @@ function Login(props) {
             />
 
             <input 
+                className='password-window'
                 type="password" 
                 name="password"
                 onChange={formik.handleChange}
@@ -64,7 +70,7 @@ function Login(props) {
             />
             <button className="login-button" type="submit" disabled={!formik.isValid}>Submit</button>
         </form>
-        
+        </div>
 
         <div class="penguin">
         <div class="penguin-head">

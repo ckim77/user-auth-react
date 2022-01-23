@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
 import Login from './components/Login';
 import Register from './components/Register';
 import { Route, Routes } from 'react-router';
 import { useEffect, useState } from 'react';
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/Dashboard';
+import Weather from './components/Weather';
+import Expense from './components/Expense';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,10 +18,11 @@ function App() {
   
   return (
     <div className="App">
-      <h1>Payin$guin</h1>
       <Routes>
         <Route path='*' element={isLoggedIn ? <Dashboard /> : <Login logFunction={loginUser} />} />
         <Route path='register' element={<Register />} />
+        <Route path='weather' element={<Weather />} />
+        <Route path='expense' element={<Expense />} />
       </Routes>
     </div>
   );
