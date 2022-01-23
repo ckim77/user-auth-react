@@ -13,6 +13,7 @@ function ExpenseList({ expense, setExpense }) {
   }
 
   return (
+    <div className = "expense">
     <div className="expense-list">
       {
         expense.sort(sortByDate).map((value, index) => (
@@ -24,6 +25,7 @@ function ExpenseList({ expense, setExpense }) {
           />
         ))
       }
+    </div>
     </div>
   )
 }

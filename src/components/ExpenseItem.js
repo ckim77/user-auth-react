@@ -11,11 +11,13 @@ function ExpenseItem({expense, index, removeExpense}) {
   }
 
   return (
+    <div className = "expense">
     <div className="expense-item">
       <button className="remove-item" onClick={() => removeHandle(index)}>x</button>
       <div className="desc" required>{expense.desc}</div>
       <div className="price" required>${expense.price}</div>
       <div className="date">{day + "/" + month + "/" + year}</div>
+    </div>
     </div>
   )
 }
