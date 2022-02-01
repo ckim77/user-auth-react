@@ -6,42 +6,11 @@
 .login {
     background-color: #F3EBF6;
     margin: 0;
-    padding: 0;
+    padding-top: 20px;
     width: 100%;
     height: 100vh;
     overflow: clip;
     font-family: "ubuntu", sans-serif;
-}
-
-.login .left-mountain {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
-    position: absolute;
-    transform: skew(0deg, 44deg);
-    z-index: 2;
-    margin-top: 100px;
-}
-
-.login .back-mountain {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
-    position: absolute;
-    z-index: 1;
-    transform: rotate(45deg);
-    left: 110px;
-    top: 225px;
-}
-
-.login .sun {
-    width: 200px;
-    height: 200px;
-    background-color: yellow;
-    position: absolute;
-    border-radius: 50%;
-    top: -75px;
-    right: -75px;
 }
 
 .login .penguin {
@@ -294,6 +263,8 @@
     font-size: 23px;
     color: #8C55AA;
     margin-bottom: 50px;
+    margin: 0;
+    padding-bottom: 15px;
 }
 
 .login .username-window {
@@ -348,5 +319,20 @@
 
 .username-window:focus, .password-window:focus {
     border: 2px solid rgba(0, 0, 0, 0.18) !important;
-    
+}
+
+.login h3 {
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #8C55AA;
+    margin-bottom: 50px;
+    margin: 0;
+    padding-bottom: 15px;
+    text-decoration: none;
+}
+
+h3:hover {
+    text-decoration: underline;
 }

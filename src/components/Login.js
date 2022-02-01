@@ -2,8 +2,9 @@ import React from 'react';
 import {useFormik} from 'formik';
 import axios from 'axios';
 //formik does all the "handle" stuff so we dont have to write it
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
+
 
 
 function Login(props) {
@@ -70,6 +71,9 @@ function Login(props) {
             />
             <button className="login-button" type="submit" disabled={!formik.isValid}>Submit</button>
         </form>
+            <Link to="/register" style={{ textDecoration: 'none' }}>
+                <h3>Don't have an account? Click here to register.</h3>
+            </Link>
         </div>
 
         <div class="penguin">

@@ -6,7 +6,7 @@ function Dashboard() {
   return <div>
       <Routes>
           <Route path="/account" element={<Account />} />
-      </Routes>
+      </Routes> 
   </div>;
 }
 

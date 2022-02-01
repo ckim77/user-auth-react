@@ -4,16 +4,16 @@
   
 .register h2 {
     text-align: center;
+    margin-top: 0;
 }
   
 .register {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
-    background-color: #1b1b32;
-    color: #f5f6f7;
     font-family: Tahoma;
     font-size: 16px;
+    padding-top: 20px;
   }
   
 .register label {
@@ -62,22 +62,21 @@
   }
   
 .register input, textarea {
-    background-color: #0a0a23;
-    border: 1px solid #0a0a23;
-    color: #ffffff;
     min-height: 2em;
   }
   
 .register input[type="submit"] {
-    display: block;
-    width: 60%;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    background-color: #3b3b4f;
-    border-color: white;
-    min-width: 300px;
-    border-radius: 50px;
+    cursor: pointer;
+    border-radius: 5em;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    color: white;
   }
   
 .register input[type="file"] {
@@ -85,9 +84,12 @@
   }
   
 .register .warning-container {
-    border: 2px solid red;
     text-align: center;
     padding: 10px;
     margin: 50px;
     margin-top: 30px;
   }
+
+.warning-container:hover {
+  border: 2px solid red;
+}
